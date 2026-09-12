@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-copy]').forEach(button=>button.addEventListener('click',async()=>{const text=button.dataset.copy;const status=document.getElementById('copy-status');try{await navigator.clipboard.writeText(text);status.textContent='已复制「'+text+'」，请打开微信搜索。';}catch{status.textContent='请长按或选中上方名称，复制后打开微信搜索。';}}));
